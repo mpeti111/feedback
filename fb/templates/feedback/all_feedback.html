@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Feedback List</title>
+    <style>
+        body{
+        background-color: rgb(152, 251, 152);
+        font-family: sans-serif;
+        color: dark-grey;
+        }
+        h1{
+        margin: 30px 30%;
+        padding: 20px;
+        text-align: center;
+        }
+        button{
+        border: 0.5px solid grey;
+        padding: 7px;
+        border-radius: 5px;
+        color: dark-grey;
+        margin: 30px 50px;
+        }
+        button:hover{
+        cursor: pointer;
+        color: light-grey;
+        font-weight: 600;
+        }
+        ul{
+        margin: 20px 10px;
+        }
+        </style>
+</head>
+<body>
+<h1>Feedback List</h1>
+<ul>
+    {% for feedback in feedbacks %}
+        <li>{{ feedback.name }} ({{ feedback.email }}) wrote: <br>{{ feedback.text }}
+        </li>
+    {% endfor %}
+</ul>
+<a href="home.html"><button>Home Page</button>
+<script>
+</script>
+</body>
+</html>
